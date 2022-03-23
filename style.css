@@ -1,0 +1,94 @@
+:root {
+  --color-dark: 0 0% 10%;
+  --color-white: 0 0% 100%;
+
+  --color-primary-yellow: 45 86% 63%;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+}
+
+/* Reusables */
+
+.flex {
+  display: flex;
+}
+
+/* Navigator Content */
+
+header {
+  background-color: hsl(var(--color-dark));
+  width: 100%;
+}
+
+.navigator {
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.navigator-links {
+  gap: 2rem;
+  justify-content: center;
+  list-style: none;
+}
+
+.navigator-links .navigator-link {
+  font-size: 3rem;
+  color: hsl(var(--color-white));
+  text-decoration: none;
+}
+
+/* Main Content */
+
+.choose-layout {
+  background-color: grey;
+  display: flex;
+  gap: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.3rem solid hsl(var(--color-dark));
+  padding: 2rem 5rem;
+  font-size: 3rem;
+}
+
+.choose-layout a:link {
+  text-decoration: none;
+  color: hsl(var(--color-dark));
+  transition: 0.3s ease color;
+}
+
+.choose-layout a:visited {
+  color: hsl(var(--color-white));
+}
+
+.choose-layout a:hover {
+  text-decoration: none;
+  color: hsl(var(--color-primary-yellow));
+}
+
+/* Layouts */
+
+
+
+
