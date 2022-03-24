@@ -3,10 +3,12 @@
   --color-white: 0 0% 100%;
 
   --color-primary-yellow: 45 86% 63%;
+
+  --default-font-size: 62.5%; /* 10px */
 }
 
 html {
-  font-size: 62.5%;
+  font-size: var(--default-font-size);
   box-sizing: border-box;
 }
 
@@ -24,10 +26,29 @@ body {
   min-height: 100vh;
 }
 
+main {
+  max-width: 70%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
 /* Reusables */
 
 .flex {
   display: flex;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  border: 0.3rem solid hsl(var(--color-dark));
+  box-shadow: 0.3rem 0.3rem 0 hsl(var(--color-dark));
+  font-weight: 700;
+}
+
+.btn.yellow {
+  color: hsl(var(--color-black));
+  background-color: hsl(var(--color-primary-yellow));
 }
 
 /* Navigator Content */
@@ -89,6 +110,32 @@ header {
 
 /* Layouts */
 
+.user-container {
+  flex: 1 0;
+}
 
+.user-feed {
+  flex: 3 0;
+}
 
+.feed-item {
+  flex-direction: column;
+  gap: 2rem;
+  border: 0.3rem solid hsl(var(--color-dark));
+  padding: 2rem;
+}
 
+.feed-item .upper {
+  gap: 2rem;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.feed-item .upper .like-container {
+  margin-left: auto;
+  gap: 2rem;
+}
+
+.feed-item .lower {
+  font-size: 1.8rem;
+}
