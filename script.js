@@ -47,7 +47,6 @@ function generateFeed() {
   </div>
 </article>`
     document.getElementById("user-feed").innerHTML = output
-    console.log(feedArray[i])
   }
 }
 
