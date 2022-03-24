@@ -1,45 +1,27 @@
-//layout 1 scripts
-
-function increaseLike() {
-  const likeCountSpan =
-    document.querySelector("#like-count").children[0].children[0]
-  let likeCount = Number(
-    document.querySelector("#like-count").children[0].children[0].innerText
-  )
-  likeCount++
-  likeCountSpan.innerText = likeCount
-}
-
 // layout2 scripts
 
-const user1 = {
+function increaseLike(element) {
+  let currentLikes = element.likeCount
+  element.likeCount = currentLikes + 1
+  generateFeed()
+}
+
+let user1 = {
   posterName: "Neil M",
   likeCount: 9,
   post: `I just set up this new discord bot, let me know what you all think. <a href="#">link</a>`,
-  increaseLike: function (like) {
-    this.likeCount = like + 1
-    return generateFeed()
-  },
 }
 
-const user2 = {
+let user2 = {
   posterName: "Nichole K",
   likeCount: 12,
   post: `Just finished my next comic, check it out. <a href="#">link</a>`,
-  increaseLike: function (like) {
-    this.likeCount = like + 1
-    return generateFeed()
-  },
 }
 
-const user3 = {
+let user3 = {
   posterName: "Jim R",
   likeCount: 9,
   post: `I can't stop listening to the <a href="#">new album</a>. Who else is liking it?`,
-  increaseLike: function (like) {
-    this.likeCount = like + 1
-    return generateFeed()
-  },
 }
 
 const feedArray = [user1, user2, user3]
@@ -55,7 +37,7 @@ function generateFeed() {
       <div id="like-count">
         <p><span>${feedArray[i].likeCount}</span> like(s)</p>
       </div>
-      <button onclick="increaseLike(${feedArray[i].likeCount})" class="btn yellow">Like</button>
+      <button onclick="increaseLike(feedArray[${i}])" class="btn yellow">Like</button>
     </div>
   </div>
   <div class="lower">
@@ -65,6 +47,7 @@ function generateFeed() {
   </div>
 </article>`
     document.getElementById("user-feed").innerHTML = output
+    console.log(feedArray[i])
   }
 }
 

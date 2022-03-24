@@ -82,6 +82,11 @@ header {
   font-size: 3rem;
   color: hsl(var(--color-white));
   text-decoration: none;
+  transition: 0.2s ease color;
+}
+
+.navigator-links .navigator-link:hover {
+  color: hsl(var(--color-primary-yellow));
 }
 
 /* Main Content */
