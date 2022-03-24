@@ -32,6 +32,12 @@ main {
   justify-content: center;
 }
 
+.main-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
 /* Reusables */
 
 .flex {
@@ -110,7 +116,12 @@ header {
 
 /* Layouts */
 
-.user-container {
+.inner-container {
+  gap: 2rem;
+}
+
+.user-info {
+  border: 0.2rem solid hsl(var(--color-dark));
   flex: 1 0;
 }
 
