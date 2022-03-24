@@ -121,12 +121,34 @@ header {
 }
 
 .user-info {
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
   border: 0.2rem solid hsl(var(--color-dark));
   flex: 1 0;
+  max-height: 30rem;
+}
+
+.user-info .avatar {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  border: 0.2rem solid hsl(var(--color-dark));
+}
+
+.user-info .add-avatar {
+  font-size: 1.6rem;
+}
+
+.user-info .username {
+  font-size: 2rem;
 }
 
 .user-feed {
+  flex-direction: column;
   flex: 3 0;
+  gap: 2rem;
 }
 
 .feed-item {
